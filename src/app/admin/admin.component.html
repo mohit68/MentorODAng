@@ -1,0 +1,251 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+<!-- header -->
+<header>
+        <div class="container">
+            <!-- nav -->
+            <nav class="py-3 d-lg-flex">
+                <div id="logo">
+                    <h1> <a href="login" style="text-decoration: none;"><span class="fa fa-university"></span> Mohit </a></h1>
+                </div>
+                
+                <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                <input type="checkbox" id="drop" />
+                
+                <ul class="menu ml-auto mt-1">
+                    <li class=""><a href="admin">Home</a></li>
+                    <li class=""><a href="admin">Technologies</a></li>
+                    <li class=""><a href="admin">Users/Mentors</a></li>
+                    <li class=""><a href="login">LogOut</a></li>
+                    <!-- <li class="last-grid-find"><input type="search" class="nav-search68" placeholder="Search"><a href="#"><i class="fas fa-search"></i></a></li> -->
+                </ul>
+                <div class="notification-div">
+                    <a><i class="far fa-bell"></i></a>
+                </div>
+            </nav>
+            <!-- //nav -->
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <!-- inner-banner -->
+    <section class="inner-banner" id="home">
+        <div class="inner-layer">
+            <div class="container">
+            </div>
+        </div>
+    </section>
+    <!-- //inner-banner -->
+    
+    <!-- single -->
+    <section class="bottom-banner-w3layouts py-5">
+        <div class="container py-md-3">
+            <h2 class="heading mb-sm-5 mb-4">Admin <strong>Panel </strong></h2>
+            <div class="row inner-sec-w3ls-w3pvtinfo cards-warp68">
+                
+                <!-- list start -->
+                
+                    <div class="container list68">
+                    <!-- <h1>Click the filter icon <small>(<i class="glyphicon glyphicon-filter"></i>)</small></h1> -->
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                            <h3 class="panel-title">Trainers</h3>
+                            <!-- <div class="pull-right">
+                                <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                                                    <i class="glyphicon glyphicon-filter"></i>
+                                                </span>
+                            </div> -->
+                            </div>
+                            <div class="panel-body">
+                            <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+                            </div>
+                            <div class="table-height68">
+                                <table class="table table-hover" id="dev-table">
+                                <thead>
+                                    <tr>
+                                    <th>#&nbsp;</th>
+                                    <th>Name</th>
+                                    <th>Trainings Completed</th>
+                                    <th>Technology</th>
+                                    <th>Experience</th>
+                                    <th>Avg Rating</th>
+                                    <th>Delete</th>
+                                    <th>Block/Unblock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let trainer of trainers">
+                                    <td>{{trainer.mentorId}}</td>
+                                    <td>{{trainer.mentorName}}</td>
+                                    <td>{{trainer.trainingsCompleted}}</td>
+                                    <td>{{trainer.skills}}</td>
+                                    <td>{{trainer.yearsOfExperience}}</td>
+                                    <td>{{trainer.avgRating}}</td>
+                                    <td>
+                                            <form #b="ngForm">
+                                                    <input type="text" id="role1" name="role" placeholder="" value="hello" required hidden>
+                                                    <button type="" (click)="delete(trainer.id)"style="
+                                                    background-color: transparent;
+                                                    outline: none;
+                                                    border: none;"
+                                                ><i class="fas fa-trash-alt"></i></button>
+                                                  </form>
+                                    </td>
+                                    <td><a href="#"><i class="fas fa-ban block-icon"></i></a></td>
+                                    </tr>  
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+    
+    
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                <h3 class="panel-title">Students</h3>
+                                <!-- <div class="pull-right">
+                                    <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                                                        <i class="glyphicon glyphicon-filter"></i>
+                                                    </span>
+                                </div> -->
+                                </div>
+                                <div class="panel-body">
+                                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+                                </div>
+                                <div class="table-height68">
+                                    <table class="table table-hover" id="dev-table">
+                                    <thead>
+                                        <tr>
+                                        <th>#&nbsp;</th>
+                                        <th>Name</th>
+                                        <th>Trainings Completed</th>
+                                        <th>Technology</th>
+                                        <th>Delete</th>
+                                        <th>Block/Unblock</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>1</td>
+                                        <td>Kilgore</td>
+                                        <td>Trout</td>
+                                        <td>kilgore</td>
+                                        <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                        <td><a href="#"><i class="fas fa-ban block-icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                        <td>2</td>
+                                        <td>Bob</td>
+                                        <td>Loblaw</td>
+                                        <td>boblahblah</td>
+                                        <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                        <td><a href="#"><i class="fas fa-ban block-icon"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                        <td>3</td>
+                                        <td>Holden</td>
+                                        <td>Caulfield</td>
+                                        <td>penceyreject</td>
+                                        <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                        <td><a href="#"><i class="fas fa-ban block-icon"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Technologies</h3>
+                                        <div class="pull-right add-tech">
+                                            <form #addTech="ngForm" (ngSubmit)="addSkill(addTech)">
+                                                <input type="text" placeholder="Skill" id="skill" name="skill" [(ngModel)]="skillname" required>
+                                                <input type="text" placeholder="TOC" id="toc" name="toc" [(ngModel)]="toc" required>
+                                                <input type="text" placeholder="Prerequisites" id="prerequisites" name="prerequisites" [(ngModel)]="prerequisites" required>
+                                                <button type="submit" value="Add" >Add</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                    <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+                                    </div>
+                                    <div class="table-height68">
+                                        <table class="table table-hover" id="dev-table">
+                                        <thead>
+                                            <tr>
+                                            <th>#&nbsp;</th>
+                                            <th>Technology</th>
+                                            <th>Prerequisites</th>
+                                            <th>Toc</th>
+                                            <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let technology of technology">
+                                            <td>{{technology.id}}</td>
+                                            <td>{{technology.name}}</td>
+                                            <td>{{technology.prerequisites}}</td>
+                                            <td>{{technology.toc}}</td>
+                                            <td>
+                                                <!-- <a href="#"><i class="fas fa-trash-alt"></i></a> -->
+                                                <form #a="ngForm">
+                                                        <input type="text" id="role1" name="role" placeholder="" value="hello" required hidden>
+                                                        <!-- <a href="/training-results" (click)="search()"><i class="fas fa-search"></i></a> -->
+                                                        <button type="" (click)="delete(technology.id)"style="
+                                                        background-color: transparent;
+                                                        outline: none;
+                                                        border: none;"
+                                                    ><i class="fas fa-trash-alt"></i></button>
+                                                      </form>
+                                            </td>
+                                            </tr>
+                                            <!-- <tr>
+                                            <td>2</td>
+                                            <td>Java</td>
+                                            <td>very difficult</td>
+                                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                            <td>3</td>
+                                            <td>Java</td>
+                                            <td>very difficult</td>
+                                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                            <td>4</td>
+                                            <td>Java</td>
+                                            <td>very difficult</td>
+                                            <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                                            </tr> -->
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+    
+                    
+                <!-- //list end -->
+                
+            </div>
+        </div>
+    </section>
+    <!-- //Single -->
+    
+    
+    
+    
+    <!-- move top -->
+    <div class="move-top text-right">
+        <a href="#home" class="move-top"> 
+            <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+        </a>
+    </div>
+    <!-- move top -->

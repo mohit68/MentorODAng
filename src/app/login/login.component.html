@@ -1,0 +1,202 @@
+
+<!-- header -->
+
+<header>
+        <div class="container">
+            <!-- nav -->
+            <nav class="py-3 d-lg-flex">
+                <div id="logo">
+                    <h1> <a href="index.html"><span class="fa fa-university"></span> Mohit </a></h1>
+                </div>
+                
+                <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                <input type="checkbox" id="drop" />
+                
+                <ul class="menu ml-auto mt-1">
+                    <li class="active"><a href="/login">Home</a></li>
+                    <li class=""><a href="#">Courses</a></li>
+                    <li class="last-grid-find">
+                        <form #a="ngForm" (ngSubmit)="search(a)" >
+                            <input type="search" class="nav-search68" placeholder="Search" name="searchKeyword" [(ngModel)]="keyword">
+                            <!-- <a href="/training-results" (click)="search()"><i class="fas fa-search"></i></a> -->
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                          </form>
+                    </li>
+                </ul>
+            </nav>
+            <!-- //nav -->
+        </div>
+    </header>
+    <!-- //header -->
+    
+    
+    <!-- banner -->
+    <div class="banner" id="home">
+        <div class="layer">
+            <div class="container">
+                <div class="banner-text-w3pvt">
+                    <!-- banner slider-->
+                    <div class="csslider infinity login-form68" id="slider1">   
+                        <div class="login">
+                            <form form #login11="ngForm" (ngSubmit)="login(login11)">
+                              <!-- <label for="username">Username:</label> -->
+                              <input type="text" id="username09" name="username" placeholder="Username" [(ngModel)]="username09" required>
+                              <!-- <label for="password">Password:</label> -->
+                              <input type="password" id="password09" name="password" placeholder="Password" [(ngModel)]="password09" required>
+                              <button type="submit">Login</button>
+                            </form>
+                            
+                            <div class="morestuff">
+                              <p ><a href="#" data-toggle="modal" data-target="#forgetpwdModal">Forgot password?</a></p>
+                              <!-- <p><a href="#3">Create an account</a></p> -->
+                            </div>
+                                
+                        </div>
+                        <ul class="banner_slide_bg">
+                            <li>
+                    <div class="w3ls_banner_txt login-btn68">
+                        <a href="#"  data-toggle="modal" data-target="#signupModal" class="btn btn-banner1 my-3" style="margin: 0 5px;">Sign Up</a>
+                        <a href="#"  data-toggle="modal" data-target="#mentorModal" class="btn btn-banner1 my-3">Mentor Sign Up</a>
+                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //banner slider-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+          
+          <!-- Signup Modal -->
+          <div class="modal fade modal-div68" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="transition: opacity 0.05s cubic-bezier(0.4, 0, 1, 1);">
+            <div class="modal-dialog" role="document" style="background: transparent;">
+              <div class="modal-content" style="background-color:transparent;border: none;">
+                <div class="modal-header" style="border-bottom:none;">
+                  <!-- <h5 class="modal-title" id="exampleModalLabel" style="color: white;text-align: center;">Sign up</h5> -->
+                  <!-- <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+                  </button> -->
+                </div>
+                <div class="modal-body login-form68">
+                        <button type="button" class="close close-btn68" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+                              </button>
+                        <div class="login">
+                            <form #sign="ngForm" (ngSubmit)="signup(sign)" > 
+                                <h1>Sign up</h1>
+                                <!-- <label for="username">Username:</label> -->
+                                <input type="email" id="username188" name="username" placeholder="Username" [(ngModel)]="field1" required>
+                                <!-- <label for="password">Password:</label> -->
+                                <input type="password" id="password188" name="password" placeholder="Password" [(ngModel)]="field2"required required>
+                                <!-- <label for="password">Password:</label> -->
+                                <!-- <input type="password" id="con-password1" name="con-password" placeholder="Re-type Password" required> -->
+
+                                <input type="text" id="firstname1" name="firstname" placeholder="First Name" [(ngModel)]="field3"required required>
+
+                                <input type="text" id="lastname1" name="lastname" placeholder="Last Name" [(ngModel)]="field4"required required>
+
+                                <input type="text" id="contactno1" name="contactno" placeholder="Contact No." [(ngModel)]="field5"required required>
+
+                                <input type="text" id="linkedURL1" name="linkedURL" placeholder="LinkedIn URL" [(ngModel)]="field6"required required>
+
+                                <input type="text" id="role1" name="role" placeholder="Role" required value="student"  [(ngModel)]="field7" hidden>
+                                
+                                <!-- <button type="submit" data-dismiss="modal" aria-label="Close">Signup</button> -->
+                                <button type="submit" routerLink="/login">Signup</button>
+                            </form>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- // Signup modal -->
+    
+        <!-- forget password modal -->
+        <div class="modal fade modal-div68" id="forgetpwdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="transition: opacity 0.05s cubic-bezier(0.4, 0, 1, 1);">
+            <div class="modal-dialog" role="document" style="background: transparent;">
+              <div class="modal-content" style="background-color:transparent;border: none;">
+                <div class="modal-header" style="border-bottom:none;">
+                </div>
+                <div class="modal-body login-form68">
+                        <button type="button" class="close close-btn68" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+                              </button>
+                        <div class="login">
+                            <form action="#1">
+                                <h1>Enter email</h1>
+                                <!-- <label for="username">Username:</label> -->
+                                <input type="text" id="usernkame" name="username" placeholder="Username" required>
+                                <!-- <label for="password">Password:</label> -->
+                                <button type="submit">Proceed</button>
+                            </form>
+                            
+                            <!-- <div class="morestuff">
+                                <p><a href="#2">New Account</a></p>
+                            </div>   -->
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- //forget password modal -->
+    
+    
+        <!-- mentor registration Modal -->
+        <div class="modal fade modal-div68" id="mentorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="transition: opacity 0.05s cubic-bezier(0.4, 0, 1, 1);">
+            <div class="modal-dialog" role="document" style="background: transparent;">
+              <div class="modal-content" style="background-color:transparent;border: none;">
+                <div class="modal-header" style="border-bottom:none;">
+                  <!-- <h5 class="modal-title" id="exampleModalLabel" style="color: white;text-align: center;">Sign up</h5> -->
+                  <!-- <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+                  </button> -->
+                </div>
+                <div class="modal-body login-form68">
+                        <button type="button" class="close close-btn68" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+                              </button>
+                        <div class="login">
+                            <form #signMentor="ngForm" (ngSubmit)="signupMentor(signMentor)">
+                                <h1>Mentor Signup</h1>
+
+                                <!-- <label for="username">Username:</label> -->
+                                <input type="email" id="username122" name="username" placeholder="Username" [(ngModel)]="field1" required>
+                                <!-- <label for="password">Password:</label> -->
+                                <input type="password" id="password12" name="password" placeholder="Password" [(ngModel)]="field2"required required>
+                                <!-- <label for="password">Password:</label> -->
+                                <!-- <input type="password" id="con-password1" name="con-password" placeholder="Re-type Password" required> -->
+
+                                <input type="text" id="firstname12" name="firstname" placeholder="First Name" [(ngModel)]="field3"required required>
+
+                                <input type="text" id="lastname12" name="lastname" placeholder="Last Name" [(ngModel)]="field4"required required>
+
+                                <input type="text" id="contactno21" name="contactno" placeholder="Contact No." [(ngModel)]="field5"required required>
+
+                                <input type="text" id="linkedURL21" name="linkedURL" placeholder="LinkedIn URL" [(ngModel)]="field6"required required>
+
+                                <input type="text" id="role12" name="role" placeholder="Role" required value="student"  [(ngModel)]="field7" hidden>
+                                
+                                <input type="number" id="experience-yrs2" name="experienceyrs" min="0" max="80" maxlength=2 placeholder="Experience years" [(ngModel)]="field9" required>
+                                
+                                <label for="technologies">Technologies:</label><br>
+                                <textarea id="mentorskills2" rows="4" placeholder="Eg:Java;C++;" [(ngModel)]="field10" name="skills"></textarea>
+                               
+                                <button type="submit">Signup</button>
+                            </form>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- // mentor registration modal -->
+    
+    <!-- //banner -->
+    
+    <!-- move top -->
+    <div class="move-top text-right">
+        <a href="#home" class="move-top"> 
+            <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+        </a>
+    </div>
+    <!-- move top -->

@@ -1,0 +1,244 @@
+
+<!-- header -->
+<header>
+
+    <div class="container">
+        <!-- nav -->
+        <nav class="py-3 d-lg-flex">
+            <div id="logo">
+                <h1> <a href="login"><span class="fa fa-university"></span> Mohit </a></h1>
+            </div>
+            
+            <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+            <input type="checkbox" id="drop" />
+            
+            <ul class="menu ml-auto mt-1">
+                <!-- <li class=""><a href="index.html">Home</a></li> -->
+                <li class=""><a href="training-results">Current Training</a></li>
+                <li class=""><a href="training-results">Completed Training</a></li>
+                <li class=""><a href="login">LogOut</a></li>
+                <li class="last-grid-find">
+                    <form #a="ngForm" (ngSubmit)="search(a)" >
+                        <input type="search" class="nav-search68" placeholder="Search" name="searchKeyword" [(ngModel)]="keyword">
+                        
+                        <!-- <a href="/training-results" (click)="search()"><i class="fas fa-search"></i></a> -->
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+                </li>
+                <!-- Value: {{ searchKeyword.value }} -->
+              </ul>
+
+            <div class="notification-div">
+                <a><i class="far fa-bell"></i></a>
+            </div>
+        </nav>
+        <!-- //nav -->
+    </div>
+</header>
+<!-- //header -->
+
+<!-- inner-banner -->
+<section class="inner-banner" id="home">
+	<div class="inner-layer">
+		<div class="container">
+		</div>
+	</div>
+</section>
+<!-- //inner-banner -->
+
+<!-- single -->
+<section class="bottom-banner-w3layouts py-5">
+	<div class="container py-md-3">
+        <h2 class="heading mb-sm-5 mb-4">Results for<strong> "Training" </strong></h2>
+        <div style="color: black" class="time-slot-div">
+            <form style="margin: 0 auto;">
+                <div class="time-slots">
+                    <h4>Select your timings</h4>
+                    <input type="time" id="appt" name="apt"
+                    min="09:00" max="18:00" value="09:00" required>
+                    To
+                    <input type="time" id="appt" name="appt"
+                    min="09:00" max="18:00" value="10:00" required> 
+                </div>
+                <div class="time-slots">
+                    <input type="time" id="appt" name="appt"
+                    min="09:00" max="18:00" value="11:00" required>
+                    To
+                    <input type="time" id="appt" name="appt"
+                    min="09:00" max="18:00"  value="12:00" required> 
+                </div>
+                <div>
+                    <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+                </div>
+            </form>
+        </div>
+		<div class="row inner-sec-w3ls-w3pvtinfo cards-warp68">
+            
+            <!-- cards start -->
+            <div class="container">
+                    <br> <br> 
+                  <div class="row">
+                    <div class="col-lg-4  col-sm-12" *ngFor="let searchResult of SearchResult">
+                      <div class="card">
+                          <img src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/66/14/d8/kangchenjunga.jpg" alt="" class="card-image">
+                        <div class="card-body">
+                          <strong><h5>{{searchResult.name}}<br><a><b>Mentor Name:</b>{{searchResult.mentorName}}</a><a style="float: right;"><b>Avg rating:</b>{{searchResult.avgRating}}</a>
+                          </h5></strong>
+                          <p class="card-content"><a><b>Trainings Completed:</b>{{searchResult.trainingsCompleted}}</a><br>
+                            {{searchResult.toc}} </p>
+                        </div>
+                        <div class="text-center cards-btn">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#profileCard">Read more</button>
+                            <button class="btn btn-warning" data-toggle="modal" data-target="#paymentModal">Request/Book</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="col-lg-4  col-sm-12">
+                        <div class="card">
+                            <img src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/66/14/d8/kangchenjunga.jpg" alt="" class="card-image">
+                            <div class="card-body">
+                            <strong><h5>Nagendra Singh<br><a><b>Avg rating:</b>4.5/5</a></h5></strong>
+                            <p class="card-content"><a><b>Trainings Completed:</b>56</a><br>
+                                Lorembis unde atque quisquam illo borum mo architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias beatae voluptatibus molestiae molestias explicabo exercitationem officiis ...</p>
+                            </div>
+                            <div class="text-center cards-btn">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#profileCard">Read more</button>
+                                <button class="btn btn-warning" data-toggle="modal" data-target="#paymentModal">Request/Book</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-lg-4  col-sm-12">
+                        <div class="card">
+                            <img src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/66/14/d8/kangchenjunga.jpg" alt="" class="card-image">
+                            <div class="card-body">
+                            <strong><h5>Nagendra Singh<br><a><b>Avg rating:</b>4.5/5</a></h5></strong>
+                            <p class="card-content"><a><b>Trainings Completed:</b>56</a><br>
+                                Lorembis unde atque quisquam illo borum mo architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias beatae voluptatibus molestiae molestias explicabo exercitationem officiis ...</p>
+                            </div>
+                            <div class="text-center cards-btn">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#profileCard">Read more</button>
+                                <button class="btn btn-warning" data-toggle="modal" data-target="#paymentModal">Request/Book</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-lg-4  col-sm-12">
+                        <div class="card">
+                            <img src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/66/14/d8/kangchenjunga.jpg" alt="" class="card-image">
+                            <div class="card-body">
+                            <strong><h5>Nagendra Singh<br><a><b>Avg rating:</b>4.5/5</a></h5></strong>
+                            <p class="card-content"><a><b>Trainings Completed:</b>56</a><br>
+                                Lorembis unde atque quisquam illo borum mo architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum alias beatae voluptatibus molestiae molestias explicabo exercitationem officiis ...</p>
+                            </div>
+                            <div class="text-center cards-btn">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#profileCard">Read more</button>
+                                <button class="btn btn-warning" data-toggle="modal" data-target="#paymentModal">Request/Book</button>
+                            </div>
+                        </div>
+                    </div> -->
+                  </div>
+                    
+                  <br>
+            </div>
+
+			<!-- /cards end -->
+			
+		</div>
+	</div>
+</section>
+<!-- //Single -->
+
+<!-- {{SearchResult}} -->
+<!-- {{keyword}} -->
+
+<div class="profile-card">
+    <div class="container">
+
+        <!-- Modal -->
+        <div class="modal fade" id="profileCard" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header modal-header68">
+                <button type="button" class="close profile-close-btn" data-dismiss="modal">&times;</button>
+                <h1 style="clear: both;">Alex Safayan</h1>
+                <h3><i class="fa fa-map-marker"> Colorado</i> &nbsp;&nbsp;<i class="fas fa-user-tag"> Java Full Stack</i></h3>
+                
+                
+              </div>
+              <div class="modal-body">
+                <p>About the mentor</p>
+                <section>
+                    <div class="img-btn">
+                        <img src="https://i0.wp.com/zblogged.com/wp-content/uploads/2019/02/FakeDP.jpeg" />
+                    </div>
+                    
+                    <div class="details-btn">
+                        
+                        
+                        <div><p class="mentor-about-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea com i ut aliquip ex ea comi ut aliquip ex ea comi ut aliquip ex e
+                                a comi ut aliquinisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea com i ut aliquip ex ea comi ut aliquip ex ea comi ut aliquip ex e
+                                a comi ut aliquinisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea comis nisi ut aliquip ex ea com i ut aliquip ex ea comi ut aliquip ex ea comi ut aliquip ex e
+                                a comi ut aliquip ex ea comi ut aliquip ex ea commodo consequat. </p></div>
+                    </div>
+                </section>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+</div>
+
+
+<!-- payment Modal -->
+<div class="modal fade modal-div68" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="background: transparent;">
+      <div class="modal-content" style="background-color:transparent;border: none;">
+        <div class="modal-header" style="border-bottom:none;">
+          <!-- <h5 class="modal-title" id="exampleModalLabel" style="color: white;text-align: center;">Sign up</h5> -->
+          <!-- <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body login-form68">
+                <button type="button" class="close close-btn68" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"  class="modal-close-btn" >&times;</span>
+                      </button>
+                <div class="login">
+                    <form action="#1">
+                        <h1>Payment</h1>
+
+                        <input type="text" id="email" name="email" placeholder="Card No." required>
+
+                        <!-- <label for="username">Expiry(MM/YYYY)</label><br> -->
+                        <input type="text" name="from" style="" placeholder="MM/YYYY" required><br>
+
+                        <!-- <label for="username">CVV</label><br> -->
+                        <input type="text" name="from" minlength="3" maxlength="3" style="" placeholder="CVV" required><br>
+                        
+
+                        <input type="text" id="mobnum" name="mobnum" placeholder="Name on the card" required>
+
+                        <button type="submit">Pay</button>
+                    </form>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- // payment modal -->
+
+<!-- move top -->
+<div class="move-top text-right">
+	<a href="#home" class="move-top"> 
+		<span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+	</a>
+</div>
+<!-- move top -->
