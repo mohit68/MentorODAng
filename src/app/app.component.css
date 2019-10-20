@@ -364,7 +364,7 @@ li > a:only-child:after { content: ''; }
 
 /*-- banner --*/
 .banner {
-    background: url(E:/exercises/assignment/ass1-ang/src/assets/banner22.jpg)no-repeat 0px 0px;
+    background: url(../assets/banner22.jpg)no-repeat 0px 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -595,7 +595,7 @@ h2.heading strong,h3.heading strong {
 
 /* stats */
 .middlesection-w3pvt {
-    background: url(E:/exercises/assignment/ass1-ang/src/assets/banner.jpg) no-repeat 0px 0px;
+    background: url(../assets/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -651,7 +651,7 @@ p.para-text-w3ls{
 /*-- inner banner --*/
 
 .inner-banner {
-    background-image: url(E:/exercises/assignment/ass1-ang/src/assets/innerbanner.jpg)no-repeat 0px 0px;
+    background-image: url(../assets/innerbanner.jpg)no-repeat 0px 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -843,7 +843,7 @@ button.btn1 {
 .clients {
     background: linear-gradient(to left, #333333 60%, #999999 60%);
     background: #333;
-    background-image: url(E:/exercises/assignment/ass1-ang/src/assets/banner.jpg) no-repeat 0px 0px;
+    background-image: url(../assets/banner.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .clients h2.heading, .middlesection-w3pvt h3.heading{
@@ -1777,7 +1777,7 @@ a.move-top span{
 		font-size: 15px;
 	}
 	.banner {
-		background: url(E:/exercises/assignment/ass1-ang/src/assets/banner22.jpg)no-repeat center;
+		background: url(../assets/banner22.jpg)no-repeat center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -1863,7 +1863,7 @@ a.move-top span{
 		width: 40px;
 	}
 	.middlesection-w3pvt {
-		background: url(E:/exercises/assignment/ass1-ang/src/assets/banner.jpg) no-repeat center;
+		background: url(../assets/banner.jpg) no-repeat center;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
